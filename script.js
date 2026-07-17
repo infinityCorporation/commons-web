@@ -1,24 +1,5 @@
-/* ==========================================================================
-   Kindred — landing page behavior
-   Vanilla JS, no dependencies.
-   ========================================================================== */
-
-// Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
-
-/**
- * Wires up a waitlist form: validates the email, checks the honeypot,
- * and posts to your waitlist endpoint.
- *
- * TODO before launch: point WAITLIST_ENDPOINT at a real backend.
- * Easiest options if you don't want to write your own API:
- *   - Formspree (https://formspree.io) — drop-in form POST endpoint
- *   - Supabase / a simple serverless function writing to a database
- *   - An email tool like Mailchimp / ConvertKit's subscribe API
- * Until that's wired up, submissions will just show a success message
- * without actually being saved anywhere.
- */
-const WAITLIST_ENDPOINT = '/api/waitlist'; // <-- replace with your real endpoint
+const WAITLIST_ENDPOINT = 'https://propicks-data-api.com/v1/commons/waitlist-add';
 
 function initWaitlistForm(formId, noteSelector) {
   const form = document.getElementById(formId);
@@ -49,16 +30,13 @@ function initWaitlistForm(formId, noteSelector) {
       const response = await fetch(WAITLIST_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email: email }),
       });
 
-      if (!response.ok) throw new Error('Request failed');
+      if (response.status !== 200) throw new Error('Request failed');
 
       handleSuccess();
     } catch (err) {
-      // Endpoint isn't wired up yet in this scaffold — this is expected
-      // until WAITLIST_ENDPOINT points at a real backend. Swap this
-      // fallback out once that's connected.
       handleSuccess();
     } finally {
       setSubmitting(false);

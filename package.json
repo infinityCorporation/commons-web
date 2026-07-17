@@ -7,6 +7,6 @@
   "type": "commonjs",
   "main": "script.js",
   "scripts": {
-    "test": "start"
+    "build": "mkdir -p build && cp -r *.html *.css *.js assets/ build/"
   }
 }
