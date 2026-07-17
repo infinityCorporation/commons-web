@@ -1,0 +1,12 @@
+{
+  "name": "commonswebsite",
+  "version": "1.0.0",
+  "description": "The landing page for the commons app to build a waiting list and drum up some excitement",
+  "license": "ISC",
+  "author": "Evan Frisbie",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "start"
+  }
+}
