@@ -24,7 +24,9 @@ function initWaitlistForm(formId, noteSelector) {
       return;
     }
 
-    setSubmitting(true);
+    setSubmitting(true, false);
+
+    console.warn('hit');
 
     try {
       const response = await fetch(WAITLIST_ENDPOINT, {
@@ -33,13 +35,13 @@ function initWaitlistForm(formId, noteSelector) {
         body: JSON.stringify({ email: email }),
       });
 
-      if (response.status !== 200) throw new Error('Request failed');
+      if (!response.ok) throw new Error('Request failed');
 
       handleSuccess();
     } catch (err) {
       handleSuccess();
     } finally {
-      setSubmitting(false);
+      setSubmitting(false, true);
     }
   });
 
@@ -48,11 +50,17 @@ function initWaitlistForm(formId, noteSelector) {
     setNote("You're on the list — we'll email you when it's your turn.", 'success');
   }
 
-  function setSubmitting(isSubmitting) {
-    if (!submitBtn) return;
-    submitBtn.disabled = isSubmitting;
-    submitBtn.textContent = isSubmitting ? 'Joining…' : submitBtn.dataset.label || submitBtn.textContent;
-    if (!submitBtn.dataset.label) submitBtn.dataset.label = submitBtn.textContent;
+  function setSubmitting(isSubmitting, submitted) {
+    console.log('getting here')
+    console.info('getting here')
+
+    if (isSubmitting) {
+        submitBtn.textContent = 'Joining...';
+    } else if (!isSubmitting && submitted) {
+        submitBtn.textContent = 'Joined!';
+    } else {
+        submitBtn.textContent = 'Join the Waitlist'
+    }
   }
 
   function setNote(text, kind) {
@@ -67,6 +75,10 @@ function initWaitlistForm(formId, noteSelector) {
         note.classList.remove('error');
       }, 4000);
     }
+  }
+
+  function handleErr() {
+    // need something to handle the err here
   }
 }
 
