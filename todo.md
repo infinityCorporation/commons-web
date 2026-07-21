@@ -1,0 +1,7 @@
+- Change the first group friends photo out for another photo, that one isn't great
+- [DONE] Get a better punch line, I am not a huge fan of this one
+- [DONE] Also you need an icon for the site for when people pull up the waitlist
+- [DONE] need to add analytics
+- Include a link to propicks
+- Maybe try out a few other punchlines as well
+- At some point, find some higher quality images or figure out how to keep the quality the same when they are so small (maybe svg)

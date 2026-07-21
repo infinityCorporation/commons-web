@@ -175,12 +175,25 @@ a { color: inherit; }
   padding-bottom: 16px;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: end;
+  gap: 4px;
+}
+
 .logo {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.35rem;
   text-decoration: none;
   color: var(--ink);
+}
+
+.logo-picture {
+    align-self: baseline;
+    display: block;
 }
 
 .site-nav {
@@ -570,5 +583,9 @@ a { color: inherit; }
   border-top: 1px solid var(--line);
   font-size: 0.82rem;
   color: var(--ink-soft);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .footer-bottom p { margin: 0; }

@@ -38,7 +38,7 @@
   <meta name="theme-color" content="#FBF8F2">
 
   <!-- Favicon placeholders — replace with real files when you have brand assets -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon.png" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Fonts -->
@@ -66,6 +66,15 @@
   }
   </script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZF3BV7YV5K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZF3BV7YV5K');
+</script>
 <body>
 
   <a class="skip-link" href="#main">Skip to content</a>
@@ -73,7 +82,10 @@
   <!-- ================= HEADER ================= -->
   <header class="site-header">
     <div class="wrap header-row">
-      <a href="#top" class="logo">Commons</a>
+        <div class="logo-container" >
+            <img src="./assets/square.png" height="28" width="28" class="logo-picture"/>
+            <a href="#top" class="logo">Commons</a>
+        </div>
       <nav class="site-nav" aria-label="Primary">
         <a href="#why">Why Commons</a>
         <a href="#how">How it works</a>
@@ -90,7 +102,8 @@
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">no algorithm · no ai · no noise</p>
-          <h1>The people who matter,<br>minus the crowd.</h1>
+          <h1>For people who miss the point of Social Media.</h1>
+          <!--<h1>The people who matter,<br>minus the crowd.</h1>-->
           <p class="hero-sub">
             Commons is a quiet space to share photos with the people you actually
             know. No algorithm to game, no AI misinformation, no politics in the
@@ -281,6 +294,7 @@
     </div>
     <div class="wrap footer-bottom">
       <p>&copy; <span id="year"></span> Commons. All rights reserved.</p>
+      <p>Check out our other app: <a href="https://propicks.io" >ProPicks</a></p>
     </div>
   </footer>
 
