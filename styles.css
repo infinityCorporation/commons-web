@@ -597,3 +597,8 @@ a { color: inherit; }
   align-items: center;
 }
 .footer-bottom p { margin: 0; }
+
+.privacy {
+  margin: 12px;
+  background-color: var(--bg);
+}

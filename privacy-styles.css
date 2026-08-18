@@ -1,0 +1,44 @@
+:root {
+  /* ---- color ---- */
+  --bg:          #FBF8F2;   /* warm ivory page background */
+  --surface:     #F4EEE3;   /* warm sand — cards, sections */
+  --surface-2:   #EFE6D6;   /* deeper sand — footer, alt sections */
+  --ink:         #2A2420;   /* near-black warm text */
+  --ink-soft:    #6E6459;   /* muted secondary text */
+  --line:        #E3D9C8;   /* hairline borders */
+
+  --honey:       #DE9F4E;   /* primary accent */
+  --honey-deep:  #C1832F;   /* primary accent, hover/active */
+  --sage:        #7C9473;   /* secondary accent */
+  --sage-deep:   #5F7757;   /* secondary accent, hover/active */
+
+  --white:       #FFFFFF;
+
+  /* photo-wall placeholder swatches (stand in for real photos — no images used) */
+  --swatch-1: #E7B98C;
+  --swatch-2: #93A8B0;
+  --swatch-3: #C98A7D;
+  --swatch-4: #A8B08A;
+  --swatch-5: #D8C79C;
+
+  /* ---- type ---- */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* ---- layout ---- */
+  --wrap: 1120px;
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+
+body {
+  margin: 12px;
+  padding: 12px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}

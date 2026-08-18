@@ -7,6 +7,7 @@ TO DO:
 - [DONE] Get Google search console set up so you can see how the seo is doing
 - Maybe add a page map even though its a single page application
 - On mobile the header is too wide with the logo, consider making the logo smaller on or maybe changing text to 'join waitlist' instead of 'join the waitlist'
+- Put the gtag on the button click not on the page load, this will get you more accurate conversions out of the actual google ads campaign53
 
 DONE: 
 - [DONE] Change the first group friends photo out for another photo, that one isn't great
